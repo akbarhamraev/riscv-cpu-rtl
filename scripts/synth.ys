@@ -1,0 +1,19 @@
+read_verilog -sv rtl/alu.sv
+read_verilog -sv rtl/register_file.sv
+read_verilog -sv rtl/imm_gen.sv
+read_verilog -sv rtl/control_unit.sv
+read_verilog -sv rtl/alu_control.sv
+read_verilog -sv rtl/instruction_memory.sv
+read_verilog -sv rtl/data_memory.sv
+read_verilog -sv rtl/riscv_cpu.sv
+
+hierarchy -top riscv_cpu
+
+proc
+opt
+memory
+opt
+
+stat
+
+write_json riscv_cpu.json

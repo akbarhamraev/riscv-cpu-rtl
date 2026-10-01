@@ -1,0 +1,6 @@
+obj_dir/
+*.vcd
+*.log
+*.json
+*.pyc
+__pycache__/
